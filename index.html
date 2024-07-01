@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+		.container{
+			display:flex;
+			width:100%;
+			height:50vh;
+			background-color:black;
+		}
+		.left{
+			width:30%;
+			background-color:white;
+			display:grid;
+			place-items : center;
+			vertical-align : middle;
+		}
+		.right{
+			width:70%;
+			background-color:white;
+		}
+		
+		.detail{
+		 	height:100%;
+			background-color:white;
+			word-wrap:break-word;
+			white-space: pre-wrap;
+		}
+		.c-button {
+		  min-width: 100px;
+		  font-family: inherit;
+		  appearance: none;
+		  border: 0;
+		  border-radius: 10px;
+		  background: lightsteelblue;
+		  color: #fff;
+		  padding: 8px 16px;
+		  font-size: 1rem;
+		  cursor: pointer;
+		  height: 85%;
+		  width: 85%;
+		}
+		 
+		.c-button:hover {
+		  background-color: forestgreen;
+		}
+		 
+		.c-button:focus {
+		  outline: none;
+		  box-shadow: -10px -10px 20px #fff, 10px 10px 20px rgb(0 0 0 / 48%);
+		  background-color: forestgreen;
+		}
+		
+	</style>
+	<script>
+		function changeDetail(){
+			let button_id  = event.target.id;
+			let detail = document.getElementById("detail_text");
+			
+			let text = "";
+			
+			switch (button_id) {
+			  case "title1":
+			  	text = "これはタイトル1の内容です！！"
+			    break;
+			  case "title2":
+			  	text = "これはタイトル2の内容です！！"
+			    break;
+			  case "title3":
+			  	text = "これはタイトル3の内容です！！"
+			    break;
+			  case "title4":
+			  	text = "これはタイトル4の内容です！！"
+			    break;
+			  default:
+			}
+			
+			detail.innerHTML = "<span>" + text + "</span>";
+		}
+	</script>
+</head>
+<body class="container">
+	<div class="left">
+		<button class="c-button" id="title1" onClick="changeDetail()" >タイトル1</button>
+		<button class="c-button" id="title2" onClick="changeDetail()" >タイトル2</button>
+		<button class="c-button" id="title3" onClick="changeDetail()" >タイトル3</button>
+		<button class="c-button" id="title4" onClick="changeDetail()" >タイトル4</button>
+	</div>
+	<div class="right">
+		<div id="detail_text" class="detail" align="center"></div>
+	</div>
+</body>
+</html>

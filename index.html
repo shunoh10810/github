@@ -27,27 +27,39 @@
 			white-space: pre-wrap;
 		}
 		.c-button {
-		  min-width: 85%;
-		  font-family: inherit;
-		  appearance: none;
-		  border: 0;
-		  border-radius: 15%;
-		  background: lightsteelblue;
-		  color: #fff;
-		  font-size: 1rem;
-		  cursor: pointer;
-		  height: 85%;
-		  width: 85%;
+		  /* 形状 */
+		  width: 210px; /* ボタンの幅 */
+		  height: 70px; /* ボタンの高さ */
+		  border-radius: 50px; /* 楕円形にする */
+
+		  /* 枠線 */
+		  border: 4px solid black; /* 太い黒枠線 */
+
+		  /* 影 */
+		  box-shadow: 0 2px 5px rgba(0, 255, 255, 0.3); /* 水色の影 */
+
+		  /* 背景色 */
+		  background-color: white; /* 白い背景 */
+
+		  /* 文字 */
+		  color: black; /* 黒い文字 */
+		  font-size: 20px; /* 文字サイズ */
+		  font-weight: bold; /* 太字 */
+		  text-align: center; /* 文字を中央揃え */
+		  line-height: 50px; /* 文字の高さをボタンの高さと揃える */
+
+		  /* その他 */
+		  cursor: pointer; /* カーソルをポインタに変更 */
 		}
 		 
 		.c-button:hover {
-		  background-color: forestgreen;
+		  background-color: lightcyan;
 		}
 		 
 		.c-button:focus {
 		  outline: none;
 		  box-shadow: -1vh -1vh 2vh #fff, 1vh 1vh 2vh rgb(0 0 0 / 48%);
-		  background-color: forestgreen;
+		  background-color: lightcyan;
 		}
 		
 	</style>
